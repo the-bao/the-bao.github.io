@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BLOG OF RTY</title>
+    <link>https://the-bao.github.io/</link>
+    <description>Recent content on BLOG OF RTY</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Jul 2022 11:29:07 +0800</lastBuildDate><atom:link href="https://the-bao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Favorite</title>
+      <link>https://the-bao.github.io/post/favorite/</link>
+      <pubDate>Sun, 24 Jul 2022 11:29:07 +0800</pubDate>
+      
+      <guid>https://the-bao.github.io/post/favorite/</guid>
+      <description>摘抄 让我们彼此靠近的，也许是表面的阳光。而让我们决定彼此亲近的，是内心的脆弱。 </description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>https://the-bao.github.io/post/first/</link>
+      <pubDate>Sun, 24 Jul 2022 09:26:56 +0800</pubDate>
+      
+      <guid>https://the-bao.github.io/post/first/</guid>
+      <description>Test 测试
+测试</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://the-bao.github.io/about/</link>
+      <pubDate>Sun, 24 Jul 2022 09:24:39 +0800</pubDate>
+      
+      <guid>https://the-bao.github.io/about/</guid>
+      <description>我的第一个博客网站 my first blog</description>
+    </item>
+    
+  </channel>
+</rss>
