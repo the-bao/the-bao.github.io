@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development on BLOG OF RTY</title>
-    <link>http://example.org/categories/development/</link>
+    <link>https://the-bao.github.io/categories/development/</link>
     <description>Recent content in Development on BLOG OF RTY</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Jul 2022 09:26:56 +0800</lastBuildDate><atom:link href="http://example.org/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Jul 2022 09:26:56 +0800</lastBuildDate><atom:link href="https://the-bao.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>测试</title>
-      <link>http://example.org/post/first/</link>
+      <link>https://the-bao.github.io/post/first/</link>
       <pubDate>Sun, 24 Jul 2022 09:26:56 +0800</pubDate>
       
-      <guid>http://example.org/post/first/</guid>
+      <guid>https://the-bao.github.io/post/first/</guid>
       <description>Test 测试
 测试</description>
     </item>

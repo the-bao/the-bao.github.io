@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BLOG OF RTY</title>
-    <link>http://example.org/</link>
+    <link>https://the-bao.github.io/</link>
     <description>Recent content on BLOG OF RTY</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Jul 2022 15:53:13 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jul 2022 15:53:13 +0800</lastBuildDate><atom:link href="https://the-bao.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go版本管理</title>
-      <link>http://example.org/go/go%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</link>
+      <link>https://the-bao.github.io/go/go%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</link>
       <pubDate>Mon, 25 Jul 2022 15:53:13 +0800</pubDate>
       
-      <guid>http://example.org/go/go%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</guid>
+      <guid>https://the-bao.github.io/go/go%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</guid>
       <description>go的版本管理 go.sum ​	为了确保一致性构建，Go引入了go.mod文件来标记每个依赖包的版本，在构建过程中go命令会下载go.mod中的依赖包，下载的依赖包会缓存在本地，以便下次构建。
 ​	考虑到下载的依赖包有可能是被黑客恶意篡改的，以及缓存在本地的依赖包也有被篡改的可能，单单一个go.mod文件并不能保证一致性构建。
 为了解决Go module的这一安全隐患，Go开发团队在引入go.mod的同时也引入了go.sum文件，用于记录每个依赖包的哈希值，在构建时，如果本地的依赖包hash值与go.sum文件中记录得不一致，则会拒绝构建。
@@ -32,10 +32,10 @@ go env -w GO111MODULE=value </description>
     
     <item>
       <title>go的环境配置</title>
-      <link>http://example.org/go/set-up/</link>
+      <link>https://the-bao.github.io/go/set-up/</link>
       <pubDate>Mon, 25 Jul 2022 14:45:26 +0800</pubDate>
       
-      <guid>http://example.org/go/set-up/</guid>
+      <guid>https://the-bao.github.io/go/set-up/</guid>
       <description>go的环境配置 安装go ​	Windows下直接去官网下载，然后按步骤安装，非常简单，不多赘述。
 配置gopath ​	GOPATH是一个环境变量，用来表明你写的go项目的存放路径。
 ​	go和其他的语言不一样，他的项目代码都放在同一个文件夹下就是你的gopath。
@@ -52,10 +52,10 @@ go env -w GOPROXY=https://goproxy.cn,direct 配置VSCode开发环境 ​	vscode�
     
     <item>
       <title>golang基础语法（一）</title>
-      <link>http://example.org/go/go1/</link>
+      <link>https://the-bao.github.io/go/go1/</link>
       <pubDate>Mon, 25 Jul 2022 14:11:55 +0800</pubDate>
       
-      <guid>http://example.org/go/go1/</guid>
+      <guid>https://the-bao.github.io/go/go1/</guid>
       <description>go的数据类型 布尔类型 数字类型 字符串类型 派生类型 指针（pointer） 数组 结构化（struct） channel类型 函数类型 切片类型 接口类型 map类型 go变量与常量 可以通过下面几种方式进行变量声明和赋值。:=的赋值包含了声明，因此只能在函数体内使用
 // var是go中表示变量的关键字 var identifier type //第一种 var v_name v_type v_name = value //第二种 var v_name = value //第三种 v_name := value 可以通过下面几种方式声明常量和赋值
 // const是go中表示常量的关键字 const identifier [type] = value //多个常量的声明 const c_name1, c_name2 = value1, value2 //常量还可以这样声明 const ( // PassWordCost 密码加密难度 PassWordCost = 12 // Active 激活用户 Active string = &amp;#34;active&amp;#34; // Inactive 未激活用户 Inactive string = &amp;#34;inactive&amp;#34; // Suspend 被封禁用户 Suspend string = &amp;#34;suspend&amp;#34; ) iota，特殊常量，可以认为是一个可以被编译器修改的常量。</description>
@@ -63,29 +63,29 @@ go env -w GOPROXY=https://goproxy.cn,direct 配置VSCode开发环境 ​	vscode�
     
     <item>
       <title>我的摘抄</title>
-      <link>http://example.org/post/favorite/</link>
+      <link>https://the-bao.github.io/post/favorite/</link>
       <pubDate>Sun, 24 Jul 2022 11:29:07 +0800</pubDate>
       
-      <guid>http://example.org/post/favorite/</guid>
+      <guid>https://the-bao.github.io/post/favorite/</guid>
       <description>摘抄 让我们彼此靠近的，也许是表面的阳光。而让我们决定彼此亲近的，是内心的脆弱。 </description>
     </item>
     
     <item>
       <title>测试</title>
-      <link>http://example.org/post/first/</link>
+      <link>https://the-bao.github.io/post/first/</link>
       <pubDate>Sun, 24 Jul 2022 09:26:56 +0800</pubDate>
       
-      <guid>http://example.org/post/first/</guid>
+      <guid>https://the-bao.github.io/post/first/</guid>
       <description>Test 测试
 测试</description>
     </item>
     
     <item>
       <title>个人简介</title>
-      <link>http://example.org/about/</link>
+      <link>https://the-bao.github.io/about/</link>
       <pubDate>Sun, 24 Jul 2022 09:24:39 +0800</pubDate>
       
-      <guid>http://example.org/about/</guid>
+      <guid>https://the-bao.github.io/about/</guid>
       <description>我的第一个博客网站 my first blog</description>
     </item>
     
