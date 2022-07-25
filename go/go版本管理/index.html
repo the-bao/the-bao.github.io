@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Go版本管理 &middot; BLOG OF RTY</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://example.org"><h1>BLOG OF RTY</h1></a>
+      <p class="lead">
+       小宝的初级博客。 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/"> 首页 </a></li><li><a href="/tags"> 分类 </a></li>
+      </ul>
+    </nav>
+
+    <p>Copyright (c) 2022,the-bao</p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Go版本管理</h1>
+  <time datetime=2022-07-25T15:53:13&#43;0800 class="post-date">Mon, Jul 25, 2022</time>
+  <h1 id="go的版本管理">go的版本管理</h1>
+<h2 id="gosum">go.sum</h2>
+<p>​	为了确保一致性构建，Go引入了go.mod文件来标记每个依赖包的版本，在构建过程中go命令会下载go.mod中的依赖包，下载的依赖包会缓存在本地，以便下次构建。</p>
+<p>​	<strong>考虑到下载的依赖包有可能是被黑客恶意篡改的，以及缓存在本地的依赖包也有被篡改的可能，单单一个go.mod文件并不能保证一致性构建。</strong></p>
+<p>为了解决<code>Go module</code>的这一安全隐患，Go开发团队在引入<code>go.mod</code>的同时也引入了<code>go.sum</code>文件，<strong>用于记录每个依赖包的哈希值</strong>，在构建时，如果本地的依赖包hash值与go.sum文件中记录得不一致，则会拒绝构建。</p>
+<h2 id="gomod">go.mod</h2>
+<p>​	Go.mod是Golang1.11版本新引入的官方包管理工具用于解决之前没有地方记录依赖包具体版本的问题，方便依赖包的管理。</p>
+<p>​	Go.mod其实就是一个Modules，关于Modules的官方定义为：</p>
+<p>​	Modules是相关Go包的集合，是源代码交换和版本控制的单元。go命令直接支持使用Modules，包括记录和解析对其他模块的依赖性。Modules替换旧的基于GOPATH的方法，来指定使用哪些源文件。</p>
+<p>​	Modules和传统的GOPATH不同，不需要包含例如src，bin这样的子目录，一个源代码目录甚至是空目录都可以作为Modules，只要其中包含有go.mod文件。</p>
+<p>​	**简而言之，没有go.mod的项目需要按照GOPATH的模式进行开发。有了go.mod的项目可以脱离GOPATH这种包管理模式，从而变得更加灵活。**有点类似于springboot中通过pom.xml进行依赖配置，python中的requirements.txt。</p>
+<p>​	go.mod只是一个配置文件，真正导入的依赖包被下载到哪里了呢？ $GOPATH/pkg/mod</p>
+<p>​	依赖包的版本如何控制呢？ 下载到$GOPATH/pkg/mod的依赖包会有一个版本好，就和maven的包管理差不多。可以看到每个依赖包后面都有一个版本号。</p>
+<p><img src="https://the-bao-1308023102.cos.ap-shanghai.myqcloud.com/image/image-20220725163209617.png" alt="image-20220725163209617"></p>
+<p>​</p>
+<p><strong>环境变量GO111MODULE</strong></p>
+<p><code>Go 1.11中</code>的<code>module</code>支持临时环境变量——<code>GO111MODULE</code>，它可以设置以下三个值：<code>off</code>,<code>on</code>或者<code>auto</code>(默认)</p>
+<ul>
+<li>off：关闭go module，即使用gopath模式</li>
+<li>on：使用go module，而不会使用gopath</li>
+<li>auto：<code>go</code>命令行会根据当前目录来决定是否启用<code>module</code>功能。只有当当前目录在<code>GOPATH/src</code>目录之外而且当前目录包含<code>go.mod</code>文件或者其子目录包含<code>go.mod</code>文件才会启用。</li>
+</ul>
+<p>设置GO111MODULE的值</p>
+<pre tabindex="0"><code>go env -w GO111MODULE=value
+</code></pre>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

@@ -2,9 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on BLOG OF RTY</title>
-    <link>https://the-bao.github.io/tags/</link>
+    <link>http://example.org/tags/</link>
     <description>Recent content in Tags on BLOG OF RTY</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://the-bao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Jul 2022 15:53:13 +0800</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go</title>
+      <link>http://example.org/tags/go/</link>
+      <pubDate>Mon, 25 Jul 2022 15:53:13 +0800</pubDate>
+      
+      <guid>http://example.org/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://example.org/tags/hugo/</link>
+      <pubDate>Sun, 24 Jul 2022 11:29:07 +0800</pubDate>
+      
+      <guid>http://example.org/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>about me</title>
+      <link>http://example.org/tags/about-me/</link>
+      <pubDate>Sun, 24 Jul 2022 09:24:39 +0800</pubDate>
+      
+      <guid>http://example.org/tags/about-me/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

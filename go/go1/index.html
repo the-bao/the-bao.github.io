@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>golang基础语法（一） &middot; BLOG OF RTY</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://example.org"><h1>BLOG OF RTY</h1></a>
+      <p class="lead">
+       小宝的初级博客。 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/"> 首页 </a></li><li><a href="/tags"> 分类 </a></li>
+      </ul>
+    </nav>
+
+    <p>Copyright (c) 2022,the-bao</p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>golang基础语法（一）</h1>
+  <time datetime=2022-07-25T14:11:55&#43;0800 class="post-date">Mon, Jul 25, 2022</time>
+  <h2 id="go的数据类型">go的数据类型</h2>
+<ul>
+<li>布尔类型</li>
+<li>数字类型</li>
+<li>字符串类型</li>
+<li>派生类型
+<ul>
+<li>指针（pointer）</li>
+<li>数组</li>
+<li>结构化（struct）</li>
+<li>channel类型</li>
+<li>函数类型</li>
+<li>切片类型</li>
+<li>接口类型</li>
+<li>map类型</li>
+</ul>
+</li>
+</ul>
+<h2 id="go变量与常量">go变量与常量</h2>
+<p>可以通过下面几种方式进行变量声明和赋值。:=的赋值包含了声明，因此只能在函数体内使用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// var是go中表示变量的关键字
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">identifier</span> <span style="color:#66d9ef">type</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//第一种
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">v_name</span> <span style="color:#a6e22e">v_type</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">v_name</span> = <span style="color:#a6e22e">value</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//第二种
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">v_name</span> = <span style="color:#a6e22e">value</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//第三种
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">v_name</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">value</span>
+</span></span></code></pre></div><p>可以通过下面几种方式声明常量和赋值</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// const是go中表示常量的关键字
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">identifier</span> [<span style="color:#66d9ef">type</span>] = <span style="color:#a6e22e">value</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//多个常量的声明
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">c_name1</span>, <span style="color:#a6e22e">c_name2</span> = <span style="color:#a6e22e">value1</span>, <span style="color:#a6e22e">value2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//常量还可以这样声明
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// PassWordCost 密码加密难度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">PassWordCost</span> = <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Active 激活用户
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">Active</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;active&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Inactive 未激活用户
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">Inactive</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;inactive&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Suspend 被封禁用户
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">Suspend</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;suspend&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>iota，特殊常量，可以认为是一个可以被编译器修改的常量。</p>
+<p>iota 在 const关键字出现时将被重置为 0(const 内部的第一行之前)，const 中每新增一行常量声明将使 iota 计数一次(iota 可理解为 const 语句块中的行索引)。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">a</span> = <span style="color:#66d9ef">iota</span> <span style="color:#75715e">//0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">b</span> = <span style="color:#66d9ef">iota</span> <span style="color:#75715e">//1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">c</span> = <span style="color:#66d9ef">iota</span> <span style="color:#75715e">//2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>)
+</span></span></code></pre></div><p><strong>iota有什么用？</strong></p>
+<ul>
+<li>首先枚举类型很常见，而且会经常使用到</li>
+<li>iota可以让枚举的赋值更加方便</li>
+</ul>
+<p><strong>通过映射使得整数枚举类型有对应的信息描述</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ColorRed</span>                = <span style="color:#66d9ef">iota</span>
+</span></span><span style="display:flex;"><span>  　　　　<span style="color:#a6e22e">ColorOrange</span>      
+</span></span><span style="display:flex;"><span>  　　　　<span style="color:#a6e22e">ColorYellow</span>      
+</span></span><span style="display:flex;"><span>  　　　　<span style="color:#a6e22e">ColorGrassland</span>   
+</span></span><span style="display:flex;"><span>  　　　　<span style="color:#a6e22e">ColorCyan</span>            
+</span></span><span style="display:flex;"><span>  　　　　<span style="color:#a6e22e">ColorBlue</span>            
+</span></span><span style="display:flex;"><span>  　　　　<span style="color:#a6e22e">ColorPurple</span>      
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ColorMap</span> = <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">int</span>]<span style="color:#66d9ef">string</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ColorRed</span>:       <span style="color:#e6db74">&#34;赤&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ColorOrange</span>:    <span style="color:#e6db74">&#34;橙&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ColorYellow</span>:    <span style="color:#e6db74">&#34;黄&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ColorGrassland</span>: <span style="color:#e6db74">&#34;绿&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ColorCyan</span>:      <span style="color:#e6db74">&#34;青&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ColorBlue</span>:      <span style="color:#e6db74">&#34;蓝&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ColorPurple</span>:    <span style="color:#e6db74">&#34;紫&#34;</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="go条件语句">go条件语句</h2>
+<ul>
+<li>if</li>
+<li>if else</li>
+<li>switch 使用 fallthrough 会强制执行后面的 case 语句，fallthrough 不会判断下一条 case 的表达式结果是否为 true。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">var1</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">val1</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">val2</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>
+<p>select：select 是 Go 中的一个控制结构，类似于用于通信的 switch 语句。每个 case 必须是一个通信操作，要么是发送要么是接收。</p>
+<p>select 随机执行一个可运行的 case。如果没有 case 可运行，它将阻塞，直到有 case 可运行。一个默认的子句应该总是可运行的。</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">communication</span> <span style="color:#a6e22e">clause</span>  :
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">statement</span>(<span style="color:#a6e22e">s</span>);      
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">communication</span> <span style="color:#a6e22e">clause</span>  :
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">statement</span>(<span style="color:#a6e22e">s</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* 你可以定义任意数量的 case */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span> : <span style="color:#75715e">/* 可选 */</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">statement</span>(<span style="color:#a6e22e">s</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="go循环语句">go循环语句</h2>
+<ul>
+<li>for循环</li>
+</ul>
+<p>go语言的for循环有三种形式</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 和c的for一样
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">init</span>; <span style="color:#a6e22e">condition</span>; <span style="color:#a6e22e">post</span> { }
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">i</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//	和c的while一样
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">condition</span> { }
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> ; <span style="color:#a6e22e">sum</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>; {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">sum</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//	和c的for(;;)一样
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> { }
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sum</span><span style="color:#f92672">++</span> <span style="color:#75715e">// 无限循环下去
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//for循环可以通过rang对可迭代的类型slice、map、数组、字符串等进行迭代循环
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">value</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">oldMap</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">newMap</span>[<span style="color:#a6e22e">key</span>] = <span style="color:#a6e22e">value</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>break：经常用于中断当前 for 循环或跳出 switch 语句</li>
+<li>continue：跳过当前循环的剩余语句，然后继续进行下一轮循环。</li>
+<li>goto：将控制转移到被标记的语句。</li>
+</ul>
+<h2 id="go函数">go函数</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 函数的定义格式如下
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">function_name</span>( [<span style="color:#a6e22e">parameter</span> <span style="color:#a6e22e">list</span>] ) [<span style="color:#a6e22e">return_types</span>] {
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">函数体</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>函数要注意传递的两种方式（java只有值传递 <a href="https://blog.csdn.net/bjweimengshu/article/details/79799485?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-79799485-blog-109570841.pc_relevant_multi_platform_whitelistv2_ad_hc&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-79799485-blog-109570841.pc_relevant_multi_platform_whitelistv2_ad_hc&amp;utm_relevant_index=2">分析见文章</a>）：</p>
+<ul>
+<li>值传递</li>
+<li>引用传递</li>
+</ul>
+<p>函数的用法：</p>
+<ul>
+<li>闭包</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 闭包的用法示例，即把函数当作一个返回值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getSequence</span>() <span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">int</span> {
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">i</span><span style="color:#f92672">:=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">int</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">i</span><span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span>  
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>方法</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 方法的语法格式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">variable_name</span> <span style="color:#a6e22e">variable_data_type</span>) <span style="color:#a6e22e">function_name</span>() [<span style="color:#a6e22e">return_type</span>]{
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">/* 函数体*/</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//相当于声明了这个variable_data_type对象类型中的方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">/* 定义结构体 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Circle</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">radius</span> <span style="color:#66d9ef">float64</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c1</span> <span style="color:#a6e22e">Circle</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">c1</span>.<span style="color:#a6e22e">radius</span> = <span style="color:#ae81ff">10.00</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;圆的面积 = &#34;</span>, <span style="color:#a6e22e">c1</span>.<span style="color:#a6e22e">getArea</span>())
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//该 method 属于 Circle 类型对象中的方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">c</span> <span style="color:#a6e22e">Circle</span>) <span style="color:#a6e22e">getArea</span>() <span style="color:#66d9ef">float64</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//c.radius 即为 Circle 类型对象中的属性
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3.14</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">radius</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

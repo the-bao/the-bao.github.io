@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>go的环境配置 &middot; BLOG OF RTY</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://example.orgcss/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://example.org"><h1>BLOG OF RTY</h1></a>
+      <p class="lead">
+       小宝的初级博客。 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/"> 首页 </a></li><li><a href="/tags"> 分类 </a></li>
+      </ul>
+    </nav>
+
+    <p>Copyright (c) 2022,the-bao</p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>go的环境配置</h1>
+  <time datetime=2022-07-25T14:45:26&#43;0800 class="post-date">Mon, Jul 25, 2022</time>
+  <h1 id="go的环境配置">go的环境配置</h1>
+<h2 id="安装go">安装go</h2>
+<p>​	Windows下直接去官网下载，然后按步骤安装，非常简单，不多赘述。</p>
+<h2 id="配置gopath">配置gopath</h2>
+<p>​	<code>GOPATH</code>是一个环境变量，用来表明你写的<code>go</code>项目的存放路径。</p>
+<p>​	go和其他的语言不一样，他的项目代码都放在同一个文件夹下就是你的<strong>gopath</strong>。</p>
+<p>​	创建好GOPATH后，要配置环境变量。</p>
+<p><img src="https://the-bao-1308023102.cos.ap-shanghai.myqcloud.com/image/image-20220725145003654.png" alt="image-20220725145003654"></p>
+<p>​	添加系统变量</p>
+<p><img src="https://the-bao-1308023102.cos.ap-shanghai.myqcloud.com/image/image-20220725145045717.png" alt="image-20220725145045717"></p>
+<p>​	再把goroot和gopath都加入到系统变量的path中。</p>
+<p><img src="https://the-bao-1308023102.cos.ap-shanghai.myqcloud.com/image/image-20220725145153976.png" alt="image-20220725145153976"></p>
+<p>​	配置好了以后，可以通过命令行检查你的goroot和gopath的路径。输入go env查看go的环境变量</p>
+<p><img src="https://the-bao-1308023102.cos.ap-shanghai.myqcloud.com/image/image-20220725145347240.png" alt="image-20220725145347240"></p>
+<p><img src="https://the-bao-1308023102.cos.ap-shanghai.myqcloud.com/image/image-20220725145401538.png" alt="image-20220725145401538"></p>
+<p>​	这里可以顺手改一下goproxy，方便后面配置vscode开发环境</p>
+<pre tabindex="0"><code>go env -w GOPROXY=https://goproxy.cn,direct
+</code></pre><p><img src="https://the-bao-1308023102.cos.ap-shanghai.myqcloud.com/image/image-20220725145541335.png" alt="image-20220725145541335"></p>
+<h2 id="配置vscode开发环境">配置VSCode开发环境</h2>
+<p>​	vscode是一个代码编辑器，但是强大到可以作为一个轻量级的IDE，用过的都说好。当然goland也是可以的。新手学习建议使用vscode。</p>
+<p>​	先安装好插件</p>
+<p><img src="https://the-bao-1308023102.cos.ap-shanghai.myqcloud.com/image/image-20220725145847227.png" alt="image-20220725145847227"></p>
+<p>​	ctrl+shift+p,然后输入go：install，执行update tools命令安装开发插件</p>
+<p><img src="https://the-bao-1308023102.cos.ap-shanghai.myqcloud.com/image/image-20220725150515210.png" alt="image-20220725150515210"></p>
+<p>​	当这些插件安装成功后，go的环境配置也基本上完成了。</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

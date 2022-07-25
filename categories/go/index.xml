@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BLOG OF RTY</title>
-    <link>http://example.org/</link>
-    <description>Recent content on BLOG OF RTY</description>
+    <title>go on BLOG OF RTY</title>
+    <link>http://example.org/categories/go/</link>
+    <description>Recent content in go on BLOG OF RTY</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Jul 2022 15:53:13 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jul 2022 15:53:13 +0800</lastBuildDate><atom:link href="http://example.org/categories/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go版本管理</title>
       <link>http://example.org/go/go%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</link>
@@ -59,34 +59,6 @@ go env -w GOPROXY=https://goproxy.cn,direct 配置VSCode开发环境 ​	vscode�
       <description>go的数据类型 布尔类型 数字类型 字符串类型 派生类型 指针（pointer） 数组 结构化（struct） channel类型 函数类型 切片类型 接口类型 map类型 go变量与常量 可以通过下面几种方式进行变量声明和赋值。:=的赋值包含了声明，因此只能在函数体内使用
 // var是go中表示变量的关键字 var identifier type //第一种 var v_name v_type v_name = value //第二种 var v_name = value //第三种 v_name := value 可以通过下面几种方式声明常量和赋值
 // const是go中表示常量的关键字 const identifier [type] = value //多个常量的声明 const c_name1, c_name2 = value1, value2 //常量还可以这样声明 const ( // PassWordCost 密码加密难度 PassWordCost = 12 // Active 激活用户 Active string = &amp;#34;active&amp;#34; // Inactive 未激活用户 Inactive string = &amp;#34;inactive&amp;#34; // Suspend 被封禁用户 Suspend string = &amp;#34;suspend&amp;#34; ) iota，特殊常量，可以认为是一个可以被编译器修改的常量。</description>
-    </item>
-    
-    <item>
-      <title>我的摘抄</title>
-      <link>http://example.org/post/favorite/</link>
-      <pubDate>Sun, 24 Jul 2022 11:29:07 +0800</pubDate>
-      
-      <guid>http://example.org/post/favorite/</guid>
-      <description>摘抄 让我们彼此靠近的，也许是表面的阳光。而让我们决定彼此亲近的，是内心的脆弱。 </description>
-    </item>
-    
-    <item>
-      <title>测试</title>
-      <link>http://example.org/post/first/</link>
-      <pubDate>Sun, 24 Jul 2022 09:26:56 +0800</pubDate>
-      
-      <guid>http://example.org/post/first/</guid>
-      <description>Test 测试
-测试</description>
-    </item>
-    
-    <item>
-      <title>个人简介</title>
-      <link>http://example.org/about/</link>
-      <pubDate>Sun, 24 Jul 2022 09:24:39 +0800</pubDate>
-      
-      <guid>http://example.org/about/</guid>
-      <description>我的第一个博客网站 my first blog</description>
     </item>
     
   </channel>
