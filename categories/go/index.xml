@@ -6,7 +6,21 @@
     <description>Recent content in go on BLOG OF RTY</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Jul 2022 15:53:13 +0800</lastBuildDate><atom:link href="https://the-bao.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jul 2022 15:29:13 +0800</lastBuildDate><atom:link href="https://the-bao.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang基础语法（二）</title>
+      <link>https://the-bao.github.io/go/go2/</link>
+      <pubDate>Sat, 30 Jul 2022 15:29:13 +0800</pubDate>
+      
+      <guid>https://the-bao.github.io/go/go2/</guid>
+      <description>go权限控制 在 Go 语言中没有 public、private、protected 这样的访问控制修饰符，它是通过字母大小写来控制可见性的。
+如果定义的常量、变量、类型、接口、结构、函数等的名称是大写字母开头，这表示它们能被其它包访问或调用（相当于 public）；非大写开头就只能在包内使用（相当于 private）。
+当访问private的变量时需要getter和setter
+和其他面向对象语言一样，Go 语言也有实现 getter 和 setter 的方式：
+对于 setter 方法使用 Set 前缀 对于 getter 方法只使用成员名 package person type Person struct { firstName string lastName string } // 获取 firstName func (p *Person) FirstName() string { return p.firstName } // 设置 firstName func (p *Person) SetFirstName(newName string) { p.firstName = newName } go继承 在 Go 语言中没有 extends 关键字，它使用在结构体中内嵌匿名类型的方法来实现继承。
+我们定义一个 Engine 接口类型，一个 Car 结构体，让 Car 结构体包含一个 Engine 类型的匿名字段：此时，匿名字段 Engine 上的方法「晋升」成为了外层类型 Car 的方法。</description>
+    </item>
+    
     <item>
       <title>Go版本管理</title>
       <link>https://the-bao.github.io/go/go%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</link>

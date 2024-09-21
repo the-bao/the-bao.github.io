@@ -5,6 +5,34 @@
     <link>https://the-bao.github.io/tags/</link>
     <description>Recent content in Tags on BLOG OF RTY</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://the-bao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Jul 2022 15:29:13 +0800</lastBuildDate><atom:link href="https://the-bao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go</title>
+      <link>https://the-bao.github.io/tags/go/</link>
+      <pubDate>Sat, 30 Jul 2022 15:29:13 +0800</pubDate>
+      
+      <guid>https://the-bao.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://the-bao.github.io/tags/hugo/</link>
+      <pubDate>Sun, 24 Jul 2022 11:29:07 +0800</pubDate>
+      
+      <guid>https://the-bao.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>about me</title>
+      <link>https://the-bao.github.io/tags/about-me/</link>
+      <pubDate>Sun, 24 Jul 2022 09:24:39 +0800</pubDate>
+      
+      <guid>https://the-bao.github.io/tags/about-me/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
